@@ -7,23 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B43C5A3274595E200316FE1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8B43C5A2274595E200316FE1 /* Alamofire */; };
 		8B55FB882742F5CB00834B94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B55FB872742F5CB00834B94 /* AppDelegate.swift */; };
-		8B55FB8A2742F5CB00834B94 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B55FB892742F5CB00834B94 /* SceneDelegate.swift */; };
-		8B55FB8C2742F5CB00834B94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B55FB8B2742F5CB00834B94 /* ViewController.swift */; };
-		8B55FB8F2742F5CB00834B94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B55FB8D2742F5CB00834B94 /* Main.storyboard */; };
 		8B55FB912742F5CD00834B94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B55FB902742F5CD00834B94 /* Assets.xcassets */; };
 		8B55FB942742F5CD00834B94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B55FB922742F5CD00834B94 /* LaunchScreen.storyboard */; };
+		8B55FBA32742FD0600834B94 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B55FBA12742FD0600834B94 /* HomeViewController.swift */; };
+		8B55FBA42742FD0600834B94 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B55FBA22742FD0600834B94 /* HomeViewController.xib */; };
+		8B55FBA6274301EE00834B94 /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B55FBA5274301EE00834B94 /* HomeBuilder.swift */; };
+		8B55FBB22743084A00834B94 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B55FBB12743084A00834B94 /* HomePresenter.swift */; };
+		8B55FBB4274308B900834B94 /* HomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B55FBB3274308B900834B94 /* HomeModels.swift */; };
+		8B8EAF3B2743BF7C0065A5B7 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8EAF3A2743BF7C0065A5B7 /* HomeRouter.swift */; };
+		8B8EAF3D2743C02F0065A5B7 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8EAF3C2743C02F0065A5B7 /* HomeInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8B55FB842742F5CB00834B94 /* new-pokeapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "new-pokeapp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B55FB872742F5CB00834B94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8B55FB892742F5CB00834B94 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8B55FB8B2742F5CB00834B94 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8B55FB8E2742F5CB00834B94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B55FB902742F5CD00834B94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B55FB932742F5CD00834B94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B55FB952742F5CD00834B94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B55FBA12742FD0600834B94 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8B55FBA22742FD0600834B94 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		8B55FBA5274301EE00834B94 /* HomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
+		8B55FBB12743084A00834B94 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		8B55FBB3274308B900834B94 /* HomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModels.swift; sourceTree = "<group>"; };
+		8B8EAF3A2743BF7C0065A5B7 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		8B8EAF3C2743C02F0065A5B7 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B43C5A3274595E200316FE1 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +66,59 @@
 		8B55FB862742F5CB00834B94 /* new-pokeapp */ = {
 			isa = PBXGroup;
 			children = (
-				8B55FB872742F5CB00834B94 /* AppDelegate.swift */,
-				8B55FB892742F5CB00834B94 /* SceneDelegate.swift */,
-				8B55FB8B2742F5CB00834B94 /* ViewController.swift */,
-				8B55FB8D2742F5CB00834B94 /* Main.storyboard */,
 				8B55FB902742F5CD00834B94 /* Assets.xcassets */,
+				8B55FB872742F5CB00834B94 /* AppDelegate.swift */,
+				8B55FBA72743026500834B94 /* Common */,
+				8B55FB9B2742F6F100834B94 /* Modules */,
+				8B55FB9E2742F78300834B94 /* SupportingFiles */,
+			);
+			path = "new-pokeapp";
+			sourceTree = "<group>";
+		};
+		8B55FB9B2742F6F100834B94 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				8B55FB9D2742F75700834B94 /* Information */,
+				8B55FB9C2742F73E00834B94 /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		8B55FB9C2742F73E00834B94 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8B55FBA5274301EE00834B94 /* HomeBuilder.swift */,
+				8B55FBA22742FD0600834B94 /* HomeViewController.xib */,
+				8B55FBA12742FD0600834B94 /* HomeViewController.swift */,
+				8B55FBB12743084A00834B94 /* HomePresenter.swift */,
+				8B8EAF3C2743C02F0065A5B7 /* HomeInteractor.swift */,
+				8B55FBB3274308B900834B94 /* HomeModels.swift */,
+				8B8EAF3A2743BF7C0065A5B7 /* HomeRouter.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8B55FB9D2742F75700834B94 /* Information */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Information;
+			sourceTree = "<group>";
+		};
+		8B55FB9E2742F78300834B94 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
 				8B55FB922742F5CD00834B94 /* LaunchScreen.storyboard */,
 				8B55FB952742F5CD00834B94 /* Info.plist */,
 			);
-			path = "new-pokeapp";
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		8B55FBA72743026500834B94 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +137,9 @@
 			dependencies = (
 			);
 			name = "new-pokeapp";
+			packageProductDependencies = (
+				8B43C5A2274595E200316FE1 /* Alamofire */,
+			);
 			productName = "new-pokeapp";
 			productReference = 8B55FB842742F5CB00834B94 /* new-pokeapp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +168,9 @@
 				Base,
 			);
 			mainGroup = 8B55FB7B2742F5CB00834B94;
+			packageReferences = (
+				8B43C5A1274595E200316FE1 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 8B55FB852742F5CB00834B94 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +187,7 @@
 			files = (
 				8B55FB942742F5CD00834B94 /* LaunchScreen.storyboard in Resources */,
 				8B55FB912742F5CD00834B94 /* Assets.xcassets in Resources */,
-				8B55FB8F2742F5CB00834B94 /* Main.storyboard in Resources */,
+				8B55FBA42742FD0600834B94 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +198,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B55FB8C2742F5CB00834B94 /* ViewController.swift in Sources */,
+				8B55FBA6274301EE00834B94 /* HomeBuilder.swift in Sources */,
+				8B8EAF3B2743BF7C0065A5B7 /* HomeRouter.swift in Sources */,
+				8B55FBB4274308B900834B94 /* HomeModels.swift in Sources */,
 				8B55FB882742F5CB00834B94 /* AppDelegate.swift in Sources */,
-				8B55FB8A2742F5CB00834B94 /* SceneDelegate.swift in Sources */,
+				8B55FBA32742FD0600834B94 /* HomeViewController.swift in Sources */,
+				8B55FBB22743084A00834B94 /* HomePresenter.swift in Sources */,
+				8B8EAF3D2743C02F0065A5B7 /* HomeInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8B55FB8D2742F5CB00834B94 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8B55FB8E2742F5CB00834B94 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8B55FB922742F5CD00834B94 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -217,7 +273,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				INFOPLIST_FILE = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -272,7 +329,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				INFOPLIST_FILE = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -291,14 +349,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7ACUHP269Y;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "new-pokeapp/Info.plist";
+				INFOPLIST_FILE = "new-pokeapp/SupportingFiles/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = PokeApp;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -321,14 +379,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7ACUHP269Y;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "new-pokeapp/Info.plist";
+				INFOPLIST_FILE = "new-pokeapp/SupportingFiles/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = PokeApp;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -364,6 +422,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8B43C5A1274595E200316FE1 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8B43C5A2274595E200316FE1 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8B43C5A1274595E200316FE1 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8B55FB7C2742F5CB00834B94 /* Project object */;
 }

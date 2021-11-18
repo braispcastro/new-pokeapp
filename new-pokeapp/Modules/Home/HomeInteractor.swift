@@ -10,16 +10,19 @@ import Alamofire
 
 protocol HomeInteractorProtocol {
     func getPokemonList()
+    func getPokemonInfo(url: String)
 }
 
 protocol HomeInteractorCallbackProtocol {
     func fillPokemonList(pokemonList: [Home.ViewModelPokemon])
+    func showPokemonInformation(pokemon: Home.PokemonInfo)
 }
 
 class HomeInteractor {
 
     var presenter: HomeInteractorCallbackProtocol!
     private let baseUrl = "https://pokeapi.co/api/v2"
+    
 }
 
 extension HomeInteractor: HomeInteractorProtocol {
@@ -36,4 +39,17 @@ extension HomeInteractor: HomeInteractorProtocol {
                 }
         }
     }
+    
+    func getPokemonInfo(url: String) {
+        AF.request(url, method: .get)
+            .validate(statusCode: 200...299)
+            .responseDecodable(of: Home.PokemonInfo.self) { response in
+                if let pokemon = response.value {
+                    self.presenter.showPokemonInformation(pokemon: pokemon)
+                } else {
+                    // Show error...
+                }
+        }
+    }
+    
 }

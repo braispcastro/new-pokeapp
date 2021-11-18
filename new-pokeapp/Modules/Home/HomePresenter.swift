@@ -26,9 +26,9 @@ final class HomePresenter {
     init(viewController: HomeViewControllerProtocol,
          router: HomeRouterProtocol,
          interactor: HomeInteractorProtocol) {
-            self.interactor = interactor
             self.viewController = viewController
             self.router = router
+            self.interactor = interactor
         }
     
 }
@@ -36,13 +36,13 @@ final class HomePresenter {
 extension HomePresenter: HomePresenterProtocol {
     
     func prepareView() {
-        let viewModel = Home.ViewModel(title: "Pokemon APP")
+        let viewModel = Home.ViewModel(title: "Pokédex")
         self.viewController.show(viewModel: viewModel)
         interactor.getPokemonList()
     }
     
     func pokemonSelected(url: String) {
-        self.router.navigateToInformation()
+        interactor.getPokemonInfo(url: url)
     }
 }
 
@@ -50,6 +50,10 @@ extension HomePresenter: HomeInteractorCallbackProtocol {
     
     func fillPokemonList(pokemonList: [Home.ViewModelPokemon]) {
         viewController.showPokemons(viewModel: pokemonList)
+    }
+    
+    func showPokemonInformation(pokemon: Home.PokemonInfo) {
+        self.router.navigateToInformation(pokemon: pokemon)
     }
     
 }

@@ -33,8 +33,8 @@ extension InformationViewController: InformationViewControllerProtocol {
         self.viewModel = viewModel
         self.title = viewModel.title
         
-        spriteFront.image = getImageFromURL(url: viewModel.frontImage)
-        spriteBack.image = getImageFromURL(url: viewModel.backImage)
+        spriteFront.image = ImageService.shared.getImageFromURL(url: viewModel.frontImage)
+        spriteBack.image = ImageService.shared.getImageFromURL(url: viewModel.backImage)
         numberLabel.text = viewModel.number
         nameLabel.text = viewModel.name
         heightLabel.text = viewModel.height

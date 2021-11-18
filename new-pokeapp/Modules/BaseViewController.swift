@@ -13,16 +13,5 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
-    
-    func getImageFromURL(url: String?) -> UIImage? {
-        
-        if let data = try? Data(contentsOf: URL(string: url!)!) {
-            if let image = UIImage(data: data) {
-                return image
-            }
-        }
-        return nil
-        
-    }
 
 }

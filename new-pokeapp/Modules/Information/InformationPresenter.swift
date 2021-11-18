@@ -36,7 +36,7 @@ extension InformationPresenter: InformationPresenterProtocol {
     
     func prepareView() {
         let viewModel = Information.ViewModel(pokemon: pokemon)
-        self.viewController.show(viewModel: viewModel)
+        viewController.show(viewModel: viewModel)
     }
     
 }

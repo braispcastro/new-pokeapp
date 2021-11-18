@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 final class HomeViewController: BaseViewController {
 
@@ -29,7 +30,9 @@ extension HomeViewController: HomeViewControllerProtocol {
         
         pokemonTableView.delegate = self
         pokemonTableView.dataSource = self
-        pokemonTableView.register(UITableViewCell.self, forCellReuseIdentifier: "pkmn")
+        
+        let cell = UINib(nibName: "PokemonTableViewCell", bundle: nil)
+        pokemonTableView.register(cell, forCellReuseIdentifier: "pkmn")
         
         pokemonTableView.reloadData()
     }
@@ -38,6 +41,11 @@ extension HomeViewController: HomeViewControllerProtocol {
         self.pokemons = viewModel
         pokemonTableView.reloadData()
     }
+    
+    func dialogError(titleError: String, descriptionError: String) {
+        
+    }
+    
 }
 
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
@@ -47,11 +55,13 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = pokemonTableView.dequeueReusableCell(withIdentifier: "pkmn") else {
-            return UITableViewCell(style: .default, reuseIdentifier: "pkmn")
+        guard let cell = pokemonTableView.dequeueReusableCell(withIdentifier: "pkmn") as? PokemonTableViewCell else {
+            return PokemonTableViewCell(style: .default, reuseIdentifier: "pkmn")
         }
         
-        cell.textLabel?.text = pokemons?[indexPath.row].name.capitalize()
+        cell.titleLabel.text = pokemons?[indexPath.row].name.capitalize()
+        cell.subtitleLabel.text = "#\(pokemons?[indexPath.row].number ?? "")"
+        cell.pokemonImage.image = pokemons?[indexPath.row].sprite
         return cell
     }
     

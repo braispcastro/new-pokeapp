@@ -10,6 +10,7 @@ import Foundation
 protocol HomeViewControllerProtocol {
     func show(viewModel: Home.ViewModel)
     func showPokemons(viewModel: [Home.ViewModelPokemon])
+    func dialogError(titleError: String, descriptionError: String)
 }
 
 protocol HomePresenterProtocol {
@@ -37,23 +38,28 @@ extension HomePresenter: HomePresenterProtocol {
     
     func prepareView() {
         let viewModel = Home.ViewModel(title: "Pokédex")
-        self.viewController.show(viewModel: viewModel)
+        viewController.show(viewModel: viewModel)
         interactor.getPokemonList()
     }
     
     func pokemonSelected(url: String) {
         interactor.getPokemonInfo(url: url)
     }
+    
 }
 
 extension HomePresenter: HomeInteractorCallbackProtocol {
     
     func fillPokemonList(pokemonList: [Home.ViewModelPokemon]) {
-        viewController.showPokemons(viewModel: pokemonList)
+        viewController.showPokemons(viewModel: pokemonList.sorted(by: { Int($0.number!)! < Int($1.number!)! } ))
     }
     
     func showPokemonInformation(pokemon: Home.PokemonInfo) {
-        self.router.navigateToInformation(pokemon: pokemon)
+        router.navigateToInformation(pokemon: pokemon)
+    }
+    
+    func showError(titleError: String, descriptionError: String) {
+        viewController.dialogError(titleError: titleError, descriptionError: descriptionError)
     }
     
 }

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum Home {
     
@@ -13,16 +14,25 @@ enum Home {
         let title: String
     }
     
-    struct ViewModelPokemon: Equatable, Decodable {
-        let name: String
-        let url: String
+    struct ViewModelPokemon: Equatable {
+        var number: String?
+        var name: String
+        var sprite: UIImage?
+        var url: String
     }
     
     struct Pokemon: Decodable {
         let count: Int?
         let next: String?
         let previous: String?
-        let results: [ViewModelPokemon]?
+        let results: [PokemonResult]?
+    }
+    
+    struct PokemonResult: Decodable {
+        let number: String?
+        let name: String
+        let sprite: String?
+        let url: String
     }
     
     struct PokemonInfo: Decodable {

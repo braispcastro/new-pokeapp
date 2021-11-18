@@ -16,6 +16,9 @@
 		8B55FBA6274301EE00834B94 /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B55FBA5274301EE00834B94 /* HomeBuilder.swift */; };
 		8B55FBB22743084A00834B94 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B55FBB12743084A00834B94 /* HomePresenter.swift */; };
 		8B55FBB4274308B900834B94 /* HomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B55FBB3274308B900834B94 /* HomeModels.swift */; };
+		8B694A642746D3B2006E0B84 /* PokemonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B694A622746D3B2006E0B84 /* PokemonTableViewCell.swift */; };
+		8B694A652746D3B2006E0B84 /* PokemonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B694A632746D3B2006E0B84 /* PokemonTableViewCell.xib */; };
+		8B694A6C2746F207006E0B84 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B694A6B2746F207006E0B84 /* ImageService.swift */; };
 		8B7936812746590D005179ED /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B79367F2746590D005179ED /* InformationViewController.swift */; };
 		8B7936822746590D005179ED /* InformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B7936802746590D005179ED /* InformationViewController.xib */; };
 		8B79368427465939005179ED /* InformationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B79368327465939005179ED /* InformationBuilder.swift */; };
@@ -40,6 +43,9 @@
 		8B55FBA5274301EE00834B94 /* HomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
 		8B55FBB12743084A00834B94 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		8B55FBB3274308B900834B94 /* HomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModels.swift; sourceTree = "<group>"; };
+		8B694A622746D3B2006E0B84 /* PokemonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTableViewCell.swift; sourceTree = "<group>"; };
+		8B694A632746D3B2006E0B84 /* PokemonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PokemonTableViewCell.xib; sourceTree = "<group>"; };
+		8B694A6B2746F207006E0B84 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		8B79367F2746590D005179ED /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		8B7936802746590D005179ED /* InformationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationViewController.xib; sourceTree = "<group>"; };
 		8B79368327465939005179ED /* InformationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationBuilder.swift; sourceTree = "<group>"; };
@@ -86,6 +92,7 @@
 			children = (
 				8B55FB902742F5CD00834B94 /* Assets.xcassets */,
 				8B55FB872742F5CB00834B94 /* AppDelegate.swift */,
+				8B694A5F2746D363006E0B84 /* Common */,
 				8B7936912746B53B005179ED /* Core */,
 				8B55FB9B2742F6F100834B94 /* Modules */,
 				8B55FB9E2742F78300834B94 /* SupportingFiles */,
@@ -140,9 +147,43 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
+		8B694A5F2746D363006E0B84 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8B694A602746D378006E0B84 /* Components */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		8B694A602746D378006E0B84 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				8B694A612746D392006E0B84 /* PokemonTableViewCell */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		8B694A612746D392006E0B84 /* PokemonTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				8B694A632746D3B2006E0B84 /* PokemonTableViewCell.xib */,
+				8B694A622746D3B2006E0B84 /* PokemonTableViewCell.swift */,
+			);
+			path = PokemonTableViewCell;
+			sourceTree = "<group>";
+		};
+		8B694A6A2746F1FD006E0B84 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8B694A6B2746F207006E0B84 /* ImageService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		8B7936912746B53B005179ED /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				8B694A6A2746F1FD006E0B84 /* Services */,
 				8B7936922746B555005179ED /* Extensions */,
 			);
 			path = Core;
@@ -221,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B55FB942742F5CD00834B94 /* LaunchScreen.storyboard in Resources */,
+				8B694A652746D3B2006E0B84 /* PokemonTableViewCell.xib in Resources */,
 				8B55FB912742F5CD00834B94 /* Assets.xcassets in Resources */,
 				8B55FBA42742FD0600834B94 /* HomeViewController.xib in Resources */,
 				8B7936822746590D005179ED /* InformationViewController.xib in Resources */,
@@ -235,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B79368C27465FBD005179ED /* InformationRouter.swift in Sources */,
+				8B694A642746D3B2006E0B84 /* PokemonTableViewCell.swift in Sources */,
 				8B79368A27465FA9005179ED /* InformationModels.swift in Sources */,
 				8B79368427465939005179ED /* InformationBuilder.swift in Sources */,
 				8B55FBA6274301EE00834B94 /* HomeBuilder.swift in Sources */,
@@ -246,6 +289,7 @@
 				8B79368827465E77005179ED /* InformationInteractor.swift in Sources */,
 				8B55FBB22743084A00834B94 /* HomePresenter.swift in Sources */,
 				8B79368627465D27005179ED /* InformationPresenter.swift in Sources */,
+				8B694A6C2746F207006E0B84 /* ImageService.swift in Sources */,
 				8B7936942746B564005179ED /* String.swift in Sources */,
 				8B8EAF3D2743C02F0065A5B7 /* HomeInteractor.swift in Sources */,
 				8B7936812746590D005179ED /* InformationViewController.swift in Sources */,
@@ -389,6 +433,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7ACUHP269Y;
@@ -419,6 +464,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7ACUHP269Y;

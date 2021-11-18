@@ -22,7 +22,7 @@ enum Information {
         init(pokemon: Home.PokemonInfo) {
             title = "[#\(pokemon.id)] \(pokemon.name.uppercased())"
             number = "Number: \(String(pokemon.id))"
-            name = "Name: \(pokemon.name)"
+            name = "Name: \(pokemon.name.capitalize())"
             height = "Height: \(String(pokemon.height))"
             weight = "Weight: \(String(pokemon.weight))"
             baseExperience = "Base experience: \(String(pokemon.baseExperience))"

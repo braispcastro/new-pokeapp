@@ -51,7 +51,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell(style: .default, reuseIdentifier: "pkmn")
         }
         
-        cell.textLabel?.text = pokemons?[indexPath.row].name
+        cell.textLabel?.text = pokemons?[indexPath.row].name.capitalize()
         return cell
     }
     

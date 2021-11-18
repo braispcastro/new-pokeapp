@@ -24,6 +24,7 @@
 		8B79368A27465FA9005179ED /* InformationModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B79368927465FA9005179ED /* InformationModels.swift */; };
 		8B79368C27465FBD005179ED /* InformationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B79368B27465FBC005179ED /* InformationRouter.swift */; };
 		8B7936902746A41C005179ED /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B79368F2746A41C005179ED /* BaseViewController.swift */; };
+		8B7936942746B564005179ED /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7936932746B564005179ED /* String.swift */; };
 		8B8EAF3B2743BF7C0065A5B7 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8EAF3A2743BF7C0065A5B7 /* HomeRouter.swift */; };
 		8B8EAF3D2743C02F0065A5B7 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8EAF3C2743C02F0065A5B7 /* HomeInteractor.swift */; };
 /* End PBXBuildFile section */
@@ -47,6 +48,7 @@
 		8B79368927465FA9005179ED /* InformationModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationModels.swift; sourceTree = "<group>"; };
 		8B79368B27465FBC005179ED /* InformationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationRouter.swift; sourceTree = "<group>"; };
 		8B79368F2746A41C005179ED /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		8B7936932746B564005179ED /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		8B8EAF3A2743BF7C0065A5B7 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		8B8EAF3C2743C02F0065A5B7 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,6 +86,7 @@
 			children = (
 				8B55FB902742F5CD00834B94 /* Assets.xcassets */,
 				8B55FB872742F5CB00834B94 /* AppDelegate.swift */,
+				8B7936912746B53B005179ED /* Core */,
 				8B55FB9B2742F6F100834B94 /* Modules */,
 				8B55FB9E2742F78300834B94 /* SupportingFiles */,
 			);
@@ -135,6 +138,22 @@
 				8B55FB952742F5CD00834B94 /* Info.plist */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		8B7936912746B53B005179ED /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				8B7936922746B555005179ED /* Extensions */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		8B7936922746B555005179ED /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8B7936932746B564005179ED /* String.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +246,7 @@
 				8B79368827465E77005179ED /* InformationInteractor.swift in Sources */,
 				8B55FBB22743084A00834B94 /* HomePresenter.swift in Sources */,
 				8B79368627465D27005179ED /* InformationPresenter.swift in Sources */,
+				8B7936942746B564005179ED /* String.swift in Sources */,
 				8B8EAF3D2743C02F0065A5B7 /* HomeInteractor.swift in Sources */,
 				8B7936812746590D005179ED /* InformationViewController.swift in Sources */,
 			);

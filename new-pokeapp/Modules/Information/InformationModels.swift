@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum Information {
     
@@ -16,18 +17,18 @@ enum Information {
         let height: String
         let weight: String
         let baseExperience: String
-        let frontImage: String?
-        let backImage: String?
+        let frontImage: UIImage?
+        let backImage: UIImage?
         
-        init(pokemon: Home.PokemonInfo) {
-            title = "[#\(pokemon.id)] \(pokemon.name.uppercased())"
-            number = "Number: \(String(pokemon.id))"
+        init(pokemon: Home.ViewModelPokemon) {
+            title = "[#\(pokemon.number!)] \(pokemon.name.uppercased())"
+            number = "Number: \(pokemon.number!)"
             name = "Name: \(pokemon.name.capitalize())"
-            height = "Height: \(String(pokemon.height))"
-            weight = "Weight: \(String(pokemon.weight))"
-            baseExperience = "Base experience: \(String(pokemon.baseExperience))"
-            frontImage = pokemon.sprites?.front
-            backImage = pokemon.sprites?.back
+            height = "Height: \(pokemon.height!)"
+            weight = "Weight: \(pokemon.weight!)"
+            baseExperience = "Base experience: \(pokemon.baseExperience!)"
+            frontImage = pokemon.frontSprite
+            backImage = pokemon.backSprite
         }
     }
     

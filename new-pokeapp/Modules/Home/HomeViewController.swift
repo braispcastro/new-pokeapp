@@ -11,6 +11,7 @@ import SwiftUI
 final class HomeViewController: BaseViewController {
 
     @IBOutlet weak var pokemonTableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var presenter: HomePresenterProtocol!
     private var viewModel: Home.ViewModel!
@@ -35,15 +36,19 @@ extension HomeViewController: HomeViewControllerProtocol {
         pokemonTableView.register(cell, forCellReuseIdentifier: "pkmn")
         
         pokemonTableView.reloadData()
+        activityIndicator.startAnimating()
     }
     
     func showPokemons(viewModel: [Home.ViewModelPokemon]) {
         self.pokemons = viewModel
         pokemonTableView.reloadData()
+        activityIndicator.stopAnimating()
     }
     
     func dialogError(titleError: String, descriptionError: String) {
-        
+        let dialogError = UIAlertController(title: titleError, message: descriptionError, preferredStyle: .alert)
+        dialogError.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(dialogError, animated: true)
     }
     
 }
@@ -61,13 +66,13 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         
         cell.titleLabel.text = pokemons?[indexPath.row].name.capitalize()
         cell.subtitleLabel.text = "#\(pokemons?[indexPath.row].number ?? "")"
-        cell.pokemonImage.image = pokemons?[indexPath.row].sprite
+        cell.pokemonImage.image = pokemons?[indexPath.row].frontSprite
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        presenter.pokemonSelected(url: (pokemons?[indexPath.row].url)!)
+        presenter.pokemonSelected(pokemon: (pokemons?[indexPath.row])!)
     }
     
 }

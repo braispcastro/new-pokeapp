@@ -10,13 +10,11 @@ import Alamofire
 
 protocol HomeInteractorProtocol {
     func getPokemonList()
-    func getPokemonInfo(url: String)
     func completePokemonInfo(pokemonList: [Home.PokemonResult])
 }
 
 protocol HomeInteractorCallbackProtocol {
     func fillPokemonList(pokemonList: [Home.ViewModelPokemon])
-    func showPokemonInformation(pokemon: Home.PokemonInfo)
     func showError(titleError: String, descriptionError: String)
 }
 
@@ -42,18 +40,6 @@ extension HomeInteractor: HomeInteractorProtocol {
         }
     }
     
-    func getPokemonInfo(url: String) {
-        AF.request(url, method: .get)
-            .validate(statusCode: 200...299)
-            .responseDecodable(of: Home.PokemonInfo.self) { response in
-                if let pokemon = response.value {
-                    self.presenter.showPokemonInformation(pokemon: pokemon)
-                } else {
-                    self.presenter.showError(titleError: "Error", descriptionError: "Error description placeholder")
-                }
-        }
-    }
-    
     func completePokemonInfo(pokemonList: [Home.PokemonResult]) {
         
         var list: [Home.ViewModelPokemon] = []
@@ -67,7 +53,11 @@ extension HomeInteractor: HomeInteractorProtocol {
                         let item = Home.ViewModelPokemon(
                             number: String(response.id),
                             name: response.name,
-                            sprite: ImageService.shared.getImageFromURL(url: response.sprites?.front),
+                            frontSprite: ImageService.shared.getImageFromURL(url: response.sprites?.front),
+                            backSprite: ImageService.shared.getImageFromURL(url: response.sprites?.back),
+                            height: String(response.height),
+                            weight: String(response.weight),
+                            baseExperience: String(response.baseExperience),
                             url: pokemonList[index].url)
                         list.append(item)
                     }

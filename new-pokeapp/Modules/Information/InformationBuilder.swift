@@ -10,7 +10,7 @@ import UIKit.UIViewController
 
 final class InformationBuilder {
     
-    func build(pokemon: Home.PokemonInfo) -> UIViewController {
+    func build(pokemon: Home.ViewModelPokemon) -> UIViewController {
         
         let viewController: InformationViewController = InformationViewController()
         let router: InformationRouter = InformationRouter(viewController: viewController)

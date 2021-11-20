@@ -9,7 +9,7 @@ import Foundation
 import UIKit.UIViewController
 
 protocol HomeRouterProtocol {
-    func navigateToInformation(pokemon: Home.PokemonInfo)
+    func navigateToInformation(pokemon: Home.ViewModelPokemon)
 }
 
 class HomeRouter: HomeRouterProtocol {
@@ -24,7 +24,7 @@ class HomeRouter: HomeRouterProtocol {
         self.viewController = viewController
     }
     
-    func navigateToInformation(pokemon: Home.PokemonInfo) {
+    func navigateToInformation(pokemon: Home.ViewModelPokemon) {
         self.viewController.navigationController?.pushViewController(InformationBuilder().build(pokemon: pokemon), animated: true)
     }
 

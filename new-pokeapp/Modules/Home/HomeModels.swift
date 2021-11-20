@@ -17,7 +17,11 @@ enum Home {
     struct ViewModelPokemon: Equatable {
         var number: String?
         var name: String
-        var sprite: UIImage?
+        var frontSprite: UIImage?
+        var backSprite: UIImage?
+        var height: String?
+        var weight: String?
+        var baseExperience: String?
         var url: String
     }
     

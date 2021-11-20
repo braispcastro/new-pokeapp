@@ -15,7 +15,7 @@ protocol HomeViewControllerProtocol {
 
 protocol HomePresenterProtocol {
     func prepareView()
-    func pokemonSelected(url: String)
+    func pokemonSelected(pokemon: Home.ViewModelPokemon)
 }
 
 final class HomePresenter {
@@ -42,8 +42,8 @@ extension HomePresenter: HomePresenterProtocol {
         interactor.getPokemonList()
     }
     
-    func pokemonSelected(url: String) {
-        interactor.getPokemonInfo(url: url)
+    func pokemonSelected(pokemon: Home.ViewModelPokemon) {
+        router.navigateToInformation(pokemon: pokemon)
     }
     
 }
@@ -52,10 +52,6 @@ extension HomePresenter: HomeInteractorCallbackProtocol {
     
     func fillPokemonList(pokemonList: [Home.ViewModelPokemon]) {
         viewController.showPokemons(viewModel: pokemonList.sorted(by: { Int($0.number!)! < Int($1.number!)! } ))
-    }
-    
-    func showPokemonInformation(pokemon: Home.PokemonInfo) {
-        router.navigateToInformation(pokemon: pokemon)
     }
     
     func showError(titleError: String, descriptionError: String) {

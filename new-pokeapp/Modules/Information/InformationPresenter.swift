@@ -19,12 +19,12 @@ final class InformationPresenter {
     let interactor: InformationInteractorProtocol
     let viewController: InformationViewControllerProtocol
     let router: InformationRouterProtocol
-    let pokemon: Home.PokemonInfo
+    let pokemon: Home.ViewModelPokemon
     
     init(viewController: InformationViewControllerProtocol,
          router: InformationRouterProtocol,
          interactor: InformationInteractorProtocol,
-         pokemon: Home.PokemonInfo) {
+         pokemon: Home.ViewModelPokemon) {
         self.viewController = viewController
         self.router = router
         self.interactor = interactor

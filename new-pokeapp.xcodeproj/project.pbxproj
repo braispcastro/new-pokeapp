@@ -30,7 +30,22 @@
 		8B7936942746B564005179ED /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7936932746B564005179ED /* String.swift */; };
 		8B8EAF3B2743BF7C0065A5B7 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8EAF3A2743BF7C0065A5B7 /* HomeRouter.swift */; };
 		8B8EAF3D2743C02F0065A5B7 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8EAF3C2743C02F0065A5B7 /* HomeInteractor.swift */; };
+		8BB1F19F274BFC9C0073CE14 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 8BB1F19E274BFC9C0073CE14 /* Nimble */; };
+		8BB1F1B1274C04020073CE14 /* HomePresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB1F1B0274C04020073CE14 /* HomePresenterTest.swift */; };
+		8BB1F1B3274C04130073CE14 /* HomeRouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB1F1B2274C04130073CE14 /* HomeRouterTest.swift */; };
+		8BB1F1B5274C04220073CE14 /* InformationPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB1F1B4274C04220073CE14 /* InformationPresenterTest.swift */; };
+		8BB1F1B7274C05E40073CE14 /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB1F1B6274C05E40073CE14 /* XCTestCase.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8BB1F1A8274C026A0073CE14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B55FB7C2742F5CB00834B94 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B55FB832742F5CB00834B94;
+			remoteInfo = "new-pokeapp";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8B55FB842742F5CB00834B94 /* new-pokeapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "new-pokeapp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +72,11 @@
 		8B7936932746B564005179ED /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		8B8EAF3A2743BF7C0065A5B7 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		8B8EAF3C2743C02F0065A5B7 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		8BB1F1A4274C026A0073CE14 /* new-pokeappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "new-pokeappTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BB1F1B0274C04020073CE14 /* HomePresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterTest.swift; sourceTree = "<group>"; };
+		8BB1F1B2274C04130073CE14 /* HomeRouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouterTest.swift; sourceTree = "<group>"; };
+		8BB1F1B4274C04220073CE14 /* InformationPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationPresenterTest.swift; sourceTree = "<group>"; };
+		8BB1F1B6274C05E40073CE14 /* XCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +85,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B43C5A3274595E200316FE1 /* Alamofire in Frameworks */,
+				8BB1F19F274BFC9C0073CE14 /* Nimble in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BB1F1A1274C026A0073CE14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,7 +103,9 @@
 			isa = PBXGroup;
 			children = (
 				8B55FB862742F5CB00834B94 /* new-pokeapp */,
+				8BB1F1A5274C026A0073CE14 /* new-pokeappTests */,
 				8B55FB852742F5CB00834B94 /* Products */,
+				8BB1F1B8274C129B0073CE14 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				8B55FB842742F5CB00834B94 /* new-pokeapp.app */,
+				8BB1F1A4274C026A0073CE14 /* new-pokeappTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -197,6 +228,48 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		8BB1F1A5274C026A0073CE14 /* new-pokeappTests */ = {
+			isa = PBXGroup;
+			children = (
+				8BB1F1AD274C02E10073CE14 /* Modules */,
+				8BB1F1B6274C05E40073CE14 /* XCTestCase.swift */,
+			);
+			path = "new-pokeappTests";
+			sourceTree = "<group>";
+		};
+		8BB1F1AD274C02E10073CE14 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				8BB1F1AE274C03E50073CE14 /* Home */,
+				8BB1F1AF274C03EB0073CE14 /* Information */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		8BB1F1AE274C03E50073CE14 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8BB1F1B0274C04020073CE14 /* HomePresenterTest.swift */,
+				8BB1F1B2274C04130073CE14 /* HomeRouterTest.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8BB1F1AF274C03EB0073CE14 /* Information */ = {
+			isa = PBXGroup;
+			children = (
+				8BB1F1B4274C04220073CE14 /* InformationPresenterTest.swift */,
+			);
+			path = Information;
+			sourceTree = "<group>";
+		};
+		8BB1F1B8274C129B0073CE14 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -215,10 +288,31 @@
 			name = "new-pokeapp";
 			packageProductDependencies = (
 				8B43C5A2274595E200316FE1 /* Alamofire */,
+				8BB1F19E274BFC9C0073CE14 /* Nimble */,
 			);
 			productName = "new-pokeapp";
 			productReference = 8B55FB842742F5CB00834B94 /* new-pokeapp.app */;
 			productType = "com.apple.product-type.application";
+		};
+		8BB1F1A3274C026A0073CE14 /* new-pokeappTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BB1F1AA274C026A0073CE14 /* Build configuration list for PBXNativeTarget "new-pokeappTests" */;
+			buildPhases = (
+				8BB1F1A0274C026A0073CE14 /* Sources */,
+				8BB1F1A1274C026A0073CE14 /* Frameworks */,
+				8BB1F1A2274C026A0073CE14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8BB1F1A9274C026A0073CE14 /* PBXTargetDependency */,
+			);
+			name = "new-pokeappTests";
+			packageProductDependencies = (
+			);
+			productName = "new-pokeappTests";
+			productReference = 8BB1F1A4274C026A0073CE14 /* new-pokeappTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -233,6 +327,10 @@
 					8B55FB832742F5CB00834B94 = {
 						CreatedOnToolsVersion = 13.1;
 					};
+					8BB1F1A3274C026A0073CE14 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 8B55FB832742F5CB00834B94;
+					};
 				};
 			};
 			buildConfigurationList = 8B55FB7F2742F5CB00834B94 /* Build configuration list for PBXProject "new-pokeapp" */;
@@ -246,12 +344,14 @@
 			mainGroup = 8B55FB7B2742F5CB00834B94;
 			packageReferences = (
 				8B43C5A1274595E200316FE1 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				8BB1F19D274BFC9C0073CE14 /* XCRemoteSwiftPackageReference "Nimble" */,
 			);
 			productRefGroup = 8B55FB852742F5CB00834B94 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				8B55FB832742F5CB00834B94 /* new-pokeapp */,
+				8BB1F1A3274C026A0073CE14 /* new-pokeappTests */,
 			);
 		};
 /* End PBXProject section */
@@ -266,6 +366,13 @@
 				8B55FB912742F5CD00834B94 /* Assets.xcassets in Resources */,
 				8B55FBA42742FD0600834B94 /* HomeViewController.xib in Resources */,
 				8B7936822746590D005179ED /* InformationViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BB1F1A2274C026A0073CE14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +403,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8BB1F1A0274C026A0073CE14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BB1F1B3274C04130073CE14 /* HomeRouterTest.swift in Sources */,
+				8BB1F1B1274C04020073CE14 /* HomePresenterTest.swift in Sources */,
+				8BB1F1B7274C05E40073CE14 /* XCTestCase.swift in Sources */,
+				8BB1F1B5274C04220073CE14 /* InformationPresenterTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8BB1F1A9274C026A0073CE14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8B55FB832742F5CB00834B94 /* new-pokeapp */;
+			targetProxy = 8BB1F1A8274C026A0073CE14 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8B55FB922742F5CD00834B94 /* LaunchScreen.storyboard */ = {
@@ -347,6 +473,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -409,6 +536,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -436,7 +564,8 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7ACUHP269Y;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "new-pokeapp/SupportingFiles/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = PokeApp;
@@ -467,7 +596,8 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7ACUHP269Y;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "new-pokeapp/SupportingFiles/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = PokeApp;
@@ -487,6 +617,58 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		8BB1F1AB274C026A0073CE14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_TESTING_SEARCH_PATHS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.braiscastro.new-pokeappTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/new-pokeapp.app/new-pokeapp";
+			};
+			name = Debug;
+		};
+		8BB1F1AC274C026A0073CE14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_TESTING_SEARCH_PATHS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.braiscastro.new-pokeappTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/new-pokeapp.app/new-pokeapp";
 			};
 			name = Release;
 		};
@@ -511,6 +693,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		8BB1F1AA274C026A0073CE14 /* Build configuration list for PBXNativeTarget "new-pokeappTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BB1F1AB274C026A0073CE14 /* Debug */,
+				8BB1F1AC274C026A0073CE14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -518,8 +709,16 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.4.0;
+				kind = exactVersion;
+				version = 5.4.4;
+			};
+		};
+		8BB1F19D274BFC9C0073CE14 /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble";
+			requirement = {
+				kind = exactVersion;
+				version = 9.2.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -529,6 +728,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8B43C5A1274595E200316FE1 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		8BB1F19E274BFC9C0073CE14 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8BB1F19D274BFC9C0073CE14 /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

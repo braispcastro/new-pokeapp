@@ -23,6 +23,29 @@ enum Home {
         var weight: String?
         var baseExperience: String?
         var url: String
+        
+        init(number: String?, name: String, frontSprite: UIImage?, backSprite: UIImage?, height: String?, weight: String?, baseExperience: String?, url: String) {
+            self.number = number
+            self.name = name
+            self.frontSprite = frontSprite
+            self.backSprite = backSprite
+            self.height = height
+            self.weight = weight
+            self.baseExperience = baseExperience
+            self.url = url
+        }
+        
+        // for unit testing
+        init() {
+            self.number = "0"
+            self.name = "Unknown"
+            self.frontSprite = UIImage()
+            self.backSprite = UIImage()
+            self.height = "0"
+            self.weight = "0"
+            self.baseExperience = "0"
+            self.url = "https://pokeapi.co/api/v2/pokemon/ditto"
+        }
     }
     
     struct Pokemon: Decodable {

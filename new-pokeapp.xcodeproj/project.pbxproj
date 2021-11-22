@@ -16,6 +16,8 @@
 		8B55FBA6274301EE00834B94 /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B55FBA5274301EE00834B94 /* HomeBuilder.swift */; };
 		8B55FBB22743084A00834B94 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B55FBB12743084A00834B94 /* HomePresenter.swift */; };
 		8B55FBB4274308B900834B94 /* HomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B55FBB3274308B900834B94 /* HomeModels.swift */; };
+		8B63B17C274C263A00E1B190 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8B63B17B274C263A00E1B190 /* Alamofire */; };
+		8B63B17E274C263E00E1B190 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 8B63B17D274C263E00E1B190 /* Nimble */; };
 		8B694A642746D3B2006E0B84 /* PokemonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B694A622746D3B2006E0B84 /* PokemonTableViewCell.swift */; };
 		8B694A652746D3B2006E0B84 /* PokemonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B694A632746D3B2006E0B84 /* PokemonTableViewCell.xib */; };
 		8B694A6C2746F207006E0B84 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B694A6B2746F207006E0B84 /* ImageService.swift */; };
@@ -30,7 +32,6 @@
 		8B7936942746B564005179ED /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7936932746B564005179ED /* String.swift */; };
 		8B8EAF3B2743BF7C0065A5B7 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8EAF3A2743BF7C0065A5B7 /* HomeRouter.swift */; };
 		8B8EAF3D2743C02F0065A5B7 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8EAF3C2743C02F0065A5B7 /* HomeInteractor.swift */; };
-		8BB1F19F274BFC9C0073CE14 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 8BB1F19E274BFC9C0073CE14 /* Nimble */; };
 		8BB1F1B1274C04020073CE14 /* HomePresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB1F1B0274C04020073CE14 /* HomePresenterTest.swift */; };
 		8BB1F1B3274C04130073CE14 /* HomeRouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB1F1B2274C04130073CE14 /* HomeRouterTest.swift */; };
 		8BB1F1B5274C04220073CE14 /* InformationPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB1F1B4274C04220073CE14 /* InformationPresenterTest.swift */; };
@@ -85,7 +86,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B43C5A3274595E200316FE1 /* Alamofire in Frameworks */,
-				8BB1F19F274BFC9C0073CE14 /* Nimble in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +93,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B63B17C274C263A00E1B190 /* Alamofire in Frameworks */,
+				8B63B17E274C263E00E1B190 /* Nimble in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +290,6 @@
 			name = "new-pokeapp";
 			packageProductDependencies = (
 				8B43C5A2274595E200316FE1 /* Alamofire */,
-				8BB1F19E274BFC9C0073CE14 /* Nimble */,
 			);
 			productName = "new-pokeapp";
 			productReference = 8B55FB842742F5CB00834B94 /* new-pokeapp.app */;
@@ -309,6 +310,8 @@
 			);
 			name = "new-pokeappTests";
 			packageProductDependencies = (
+				8B63B17B274C263A00E1B190 /* Alamofire */,
+				8B63B17D274C263E00E1B190 /* Nimble */,
 			);
 			productName = "new-pokeappTests";
 			productReference = 8BB1F1A4274C026A0073CE14 /* new-pokeappTests.xctest */;
@@ -344,7 +347,7 @@
 			mainGroup = 8B55FB7B2742F5CB00834B94;
 			packageReferences = (
 				8B43C5A1274595E200316FE1 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				8BB1F19D274BFC9C0073CE14 /* XCRemoteSwiftPackageReference "Nimble" */,
+				8B63B178274C250A00E1B190 /* XCRemoteSwiftPackageReference "Nimble" */,
 			);
 			productRefGroup = 8B55FB852742F5CB00834B94 /* Products */;
 			projectDirPath = "";
@@ -713,7 +716,7 @@
 				version = 5.4.4;
 			};
 		};
-		8BB1F19D274BFC9C0073CE14 /* XCRemoteSwiftPackageReference "Nimble" */ = {
+		8B63B178274C250A00E1B190 /* XCRemoteSwiftPackageReference "Nimble" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Quick/Nimble";
 			requirement = {
@@ -729,9 +732,14 @@
 			package = 8B43C5A1274595E200316FE1 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-		8BB1F19E274BFC9C0073CE14 /* Nimble */ = {
+		8B63B17B274C263A00E1B190 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8BB1F19D274BFC9C0073CE14 /* XCRemoteSwiftPackageReference "Nimble" */;
+			package = 8B43C5A1274595E200316FE1 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		8B63B17D274C263E00E1B190 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8B63B178274C250A00E1B190 /* XCRemoteSwiftPackageReference "Nimble" */;
 			productName = Nimble;
 		};
 /* End XCSwiftPackageProductDependency section */

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B102F6C274D50B000118589 /* ImageServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B102F6B274D50B000118589 /* ImageServiceTest.swift */; };
+		8B102F6F274D582900118589 /* StringTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B102F6E274D582900118589 /* StringTest.swift */; };
 		8B43C5A3274595E200316FE1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8B43C5A2274595E200316FE1 /* Alamofire */; };
 		8B55FB882742F5CB00834B94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B55FB872742F5CB00834B94 /* AppDelegate.swift */; };
 		8B55FB912742F5CD00834B94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B55FB902742F5CD00834B94 /* Assets.xcassets */; };
@@ -49,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8B102F6B274D50B000118589 /* ImageServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageServiceTest.swift; sourceTree = "<group>"; };
+		8B102F6E274D582900118589 /* StringTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTest.swift; sourceTree = "<group>"; };
 		8B55FB842742F5CB00834B94 /* new-pokeapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "new-pokeapp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B55FB872742F5CB00834B94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B55FB902742F5CD00834B94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -101,6 +105,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B102F69274D509300118589 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				8B102F6A274D509A00118589 /* Services */,
+				8B102F6D274D581400118589 /* Extensions */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		8B102F6A274D509A00118589 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8B102F6B274D50B000118589 /* ImageServiceTest.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8B102F6D274D581400118589 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8B102F6E274D582900118589 /* StringTest.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		8B55FB7B2742F5CB00834B94 = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +262,7 @@
 		8BB1F1A5274C026A0073CE14 /* new-pokeappTests */ = {
 			isa = PBXGroup;
 			children = (
+				8B102F69274D509300118589 /* Core */,
 				8BB1F1AD274C02E10073CE14 /* Modules */,
 				8BB1F1B6274C05E40073CE14 /* XCTestCase.swift */,
 			);
@@ -410,6 +440,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B102F6F274D582900118589 /* StringTest.swift in Sources */,
+				8B102F6C274D50B000118589 /* ImageServiceTest.swift in Sources */,
 				8BB1F1B3274C04130073CE14 /* HomeRouterTest.swift in Sources */,
 				8BB1F1B1274C04020073CE14 /* HomePresenterTest.swift in Sources */,
 				8BB1F1B7274C05E40073CE14 /* XCTestCase.swift in Sources */,

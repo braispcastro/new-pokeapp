@@ -11,7 +11,6 @@ import Nimble
 
 class HomePresenterTest: XCTestCase {
     
-    //private var sut: HomePresenter<SpyViewController, SpyRouter>!
     private var sut: HomePresenter!
     private var spyRouter: SpyRouter!
     private var spyViewController: SpyViewController!
@@ -42,9 +41,34 @@ class HomePresenterTest: XCTestCase {
             interactor: mockHomeInteractor)
     }
     
-    // MARK: - Public methods
+    // MARK: - Test methods
     
-    // TODO: Tests...
+    func test_user_enters_on_home_screen() {
+        sut.prepareView()
+        
+        let expectedViewModel = Home.ViewModel(title: "Pokédex")
+        
+        expect(self.spyViewController.viewModel).toEventually(equal(expectedViewModel))
+        expect(self.spyViewController.showCalled).toEventually(equal(1))
+    }
+    
+    func test_user_selects_a_pokemon_and_goes_to_information_view() {
+        sut.pokemonSelected(pokemon: Home.ViewModelPokemon())
+        
+        expect(self.spyRouter.navigateToInformationCalled).toEventually(beTrue())
+    }
+    
+    func test_app_gets_pokemon_list_and_shows_with_no_error() {
+        sut.fillPokemonList(pokemonList: [Home.ViewModelPokemon(), Home.ViewModelPokemon()])
+        
+        expect(self.spyViewController.showPokemonsCalled).toEventually(equal(1))
+    }
+    
+    func test_app_fails_to_get_pokemon_list() {
+        sut.showError(titleError: "Error", descriptionError: "Test placeholder")
+        
+        expect(self.spyViewController.dialogErrorCalled).toEventually(equal(1))
+    }
 }
 
 private class SpyViewController: HomeViewControllerProtocol {

@@ -11,7 +11,6 @@ import Nimble
 
 class InformationPresenterTest: XCTestCase {
     
-    //private var sut: InformationPresenter<SpyViewController, SpyRouter>!
     private var sut: InformationPresenter!
     private var spyRouter: SpyRouter!
     private var spyViewController: SpyViewController!
@@ -43,9 +42,16 @@ class InformationPresenterTest: XCTestCase {
             pokemon: pokemon)
     }
     
-    // MARK: - Public methods
+    // MARK: - Test methods
     
-    // TODO: Tests...
+    func test_user_enters_on_information_screen() {
+        sut.prepareView()
+        
+        let expectedViewModel = Information.ViewModel(pokemon: Home.ViewModelPokemon())
+        
+        expect(self.spyViewController.viewModel).toEventually(equal(expectedViewModel))
+        expect(self.spyViewController.showCalled).toEventually(equal(1))
+    }
 }
 
 private class SpyViewController: InformationViewControllerProtocol {

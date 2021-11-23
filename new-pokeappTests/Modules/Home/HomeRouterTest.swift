@@ -24,18 +24,22 @@ class HomeRouterTest: BaseTestCase {
         sut = nil
         super.tearDown()
     }
-
-    func test_user_navigates_to_information_view() {
-        
-        sut.navigateToInformation(pokemon: Home.ViewModelPokemon())
-        expect(self.nav.visibleViewController).toEventually(beAKindOf(UIViewController.self))
-    }
+    
+    // MARK: - Private methods
     
     private func givenSut(viewControllers: [UIViewController] = [UIViewController()]) {
         
         let controller = UIViewController()
         nav = UINavigationController(rootViewController: controller)
         sut = HomeRouter(viewController: controller)
+    }
+    
+    // MARK: - Test methods
+
+    func test_user_navigates_to_information_view() {
+        
+        sut.navigateToInformation(pokemon: Home.ViewModelPokemon())
+        expect(self.nav.visibleViewController).toEventually(beAKindOf(UIViewController.self))
     }
     
 }

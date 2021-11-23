@@ -14,7 +14,7 @@ final class ImageService {
     
     func getImageFromURL(url: String?) -> UIImage? {
         
-        if (url == nil) {
+        if (url == nil || url == "") {
             return UIImage(systemName: "")
         }
         
@@ -23,6 +23,7 @@ final class ImageService {
                 return image
             }
         }
+        
         return nil
         
     }
